@@ -33,7 +33,7 @@ const Header = (props: Props) => {
         }}
         className=""
       >
-        <Link href="#ontop">
+        <Link href="#main">
           <Image src={"/logo.png"} height={49} width={46} />
         </Link>
       </motion.div>
@@ -55,8 +55,7 @@ const Header = (props: Props) => {
         <Link href="#characters">
           <button className="navButton ">Characters</button>
         </Link>
-        <button className="navButton ">Locations</button>
-        <button className="navButton ">Episodes</button>
+
         <IconButton
           className="inline-flex md:hidden"
           size="large"
@@ -79,13 +78,9 @@ const Header = (props: Props) => {
           }}
         >
           <MenuItem>
-            <button>Characters</button>
-          </MenuItem>
-          <MenuItem>
-            <button>Locations</button>
-          </MenuItem>
-          <MenuItem>
-            <button>Episodes</button>
+            <Link href="#characters">
+              <button>Characters</button>
+            </Link>
           </MenuItem>
         </Menu>
       </motion.div>

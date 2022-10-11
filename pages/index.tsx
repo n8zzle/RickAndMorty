@@ -67,14 +67,11 @@ export default function Home({ data }) {
 
       <Header />
 
-      <section id="ontop" className="snap-start">
+      <section id="main" className="snap-start">
         <Hero />
       </section>
       <section id="characters" className="snap-center">
         <Characters results={results} handleToLoadMore={handleToLoadMore} />
-      </section>
-      <section id="locations" className="snap-center">
-        <Locations />
       </section>
     </div>
   );

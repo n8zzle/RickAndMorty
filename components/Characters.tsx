@@ -12,7 +12,7 @@ function Characters({ results, handleToLoadMore }) {
         opacity: 1,
       }}
       id="characters"
-      className="max-w-7xl h-screen  mx-auto flex flex-col justify-center text-center"
+      className="max-w-7xl h-screen  mx-auto flex flex-col  justify-center text-center"
     >
       <h3 className="relative top-20 md:top-24 uppercase tracking-[10px] md:tracking-[20px] text-[#65cde1] font-bold text-xl md:text-2xl">
         Characters
