@@ -7,7 +7,7 @@ type Props = {};
 
 const Hero = (props: Props) => {
   return (
-    <div className="h-screen flex flex-col items-center justify-center overflow-hidden space-y-8">
+    <div className="h-screen flex flex-col items-center justify-center overflow-hidden space-y-8 ">
       <BackgroundCircles />
       <motion.div
         initial={{
@@ -38,7 +38,7 @@ const Hero = (props: Props) => {
         transition={{
           duration: 1.5,
         }}
-        className="uppercase tracking-[15px]"
+        className="uppercase tracking-[10px] md:tracking-[20px]"
       >
         Swipe down
       </motion.p>

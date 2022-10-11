@@ -18,7 +18,7 @@ const Header = (props: Props) => {
   };
 
   return (
-    <header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto  z-20">
+    <header className="sticky max-w-7xl  mx-auto top-0 p-5 flex items-start justify-between   z-20">
       <motion.div
         initial={{
           x: -500,
@@ -33,7 +33,7 @@ const Header = (props: Props) => {
         }}
         className=""
       >
-        <Link href={"/"}>
+        <Link href="#ontop">
           <Image src={"/logo.png"} height={49} width={46} />
         </Link>
       </motion.div>
@@ -52,7 +52,9 @@ const Header = (props: Props) => {
         }}
         className=""
       >
-        <button className="navButton ">Characters</button>
+        <Link href="#characters">
+          <button className="navButton ">Characters</button>
+        </Link>
         <button className="navButton ">Locations</button>
         <button className="navButton ">Episodes</button>
         <IconButton
