@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import Characters from "../components/Characters";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
-import Locations from "../components/Locations";
 
 const defaultEndpoint = "https://rickandmortyapi.com/api/character";
 export async function getServerSideProps() {

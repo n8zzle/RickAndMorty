@@ -23,6 +23,7 @@ function Characters({ results, handleToLoadMore }) {
           return (
             <CharacterCard
               key={id}
+              id={id}
               name={name}
               image={image}
               species={species}
