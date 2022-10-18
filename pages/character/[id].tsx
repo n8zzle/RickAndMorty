@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -20,30 +19,54 @@ export async function getServerSideProps({ query }) {
 export default function Character({ data }) {
   const { name, image, gender, location, origin, species, status } = data;
   return (
-    <div className="h-screen  snap-y snap-mandatory overflow-x-hidden z-0">
+    <div className="w-1/2 flex flex-col  max-w-7xl mx-auto space-y-10 p-10">
       <Head>
         <title>{name}</title>
       </Head>
-
-      <div className="h-screen w-screen flex flex-col items-center justify-center max-w-7xl mx-auto ">
-        <h1 className="text-6xl font-extrabold mb-10 tracking-[15px] text-[#65cde1]">
-          {name}
-        </h1>
-        <div className="flex flex-row max-w-5xl mx-auto bg-slate-300 rounded-lg shadow-lg mb-10">
-          <div className="w-[600px] h-[350px] flex">
-            <img src={image} className="w-full h-full rounded-lg" />
-          </div>
-          <div className=" flex flex-col w-full justify-center items-center space-y-5">
-            <h1 className="text-4xl font-extrabold">Details:</h1>
-            <h3 className="text-lg ">Status: {status}</h3>
-            <h3 className="text-lg ">Gender: {gender}</h3>
-            <h3 className="text-lg ">Spacies: {species}</h3>
-          </div>
+      {/*Character & Picture*/}
+      <div className="flex flex-col  justify-center items-center space-y-5 ">
+        <img src={image} className="rounded-full h-80 w-80" />
+        <h1 className="text-4xl font-extrabold">{name}</h1>
+      </div>
+      {/*Information*/}
+      <div className="flex flex-col space-y-5">
+        <h3 className="flex text-xl font-bold text-gray-600  items-center justify-center">
+          Information
+        </h3>
+        <div className="flex flex-col">
+          <h4 className="text-lg font-bold">Gender</h4>
+          <p className="text-md text-gray-600">{gender}</p>
+          <hr />
         </div>
+
+        <div className="flex flex-col">
+          <h4 className="text-lg font-bold">Status</h4>
+          <p className="text-md text-gray-600">{status}</p>
+          <hr />
+        </div>
+
+        <div className="flex flex-col">
+          <h4 className="text-lg font-bold">Specie</h4>
+          <p className="text-md text-gray-600">{species}</p>
+          <hr />
+        </div>
+
+        <div className="flex flex-col">
+          <h4 className="text-lg font-bold">Origin</h4>
+          <p className="text-md text-gray-600">{origin.name}</p>
+          <hr />
+        </div>
+
+        <div className="flex flex-col">
+          <h4 className="text-lg font-bold">Location</h4>
+          <p className="text-md text-gray-600">{location.name}</p>
+          <hr />
+        </div>
+
         <Link href="../">
-          <div className="bg-[#65cde1] px-40 py-5 rounded-lg shadow-lg cursor-pointer">
-            <p className="font-bold">Back to main menu</p>
-          </div>
+          <button className="p-5 rounded-lg shadow-md bg-[#65cde1]">
+            Back to main menu
+          </button>
         </Link>
       </div>
     </div>
